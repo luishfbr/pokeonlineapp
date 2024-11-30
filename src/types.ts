@@ -1,6 +1,7 @@
 export interface ResponseGetApiWeather {
-  weather: Weather;
+  weather: Weather[];
   main: Main;
+  cityName: string;
 }
 
 interface Main {
@@ -9,6 +10,9 @@ interface Main {
   humidity: number;
   temp_min: number;
   temp_max: number;
+  sea_level: number;
+  grnd_level: number;
+  feels_like: number;
 }
 
 interface Weather {
@@ -17,4 +21,3 @@ interface Weather {
   description: string;
   icon: string;
 }
-

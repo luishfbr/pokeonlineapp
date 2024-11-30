@@ -1,0 +1,21 @@
+services:
+  app:
+    container_name: pokeonlineapp
+    image: pokeonlineapp
+    environment:
+      OPEN_WEATHER_API_KEY: ${OPEN_WEATHER_API_KEY}
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    volumes:
+      - .:/app
+      - /app/node_modules
+      - /app/.next
+    ports:
+      - "80:80"
+    networks:
+      - pokeonlineapp
+
+networks:
+  pokeonlineapp:
+    driver: bridge
