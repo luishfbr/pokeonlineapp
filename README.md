@@ -1,36 +1,51 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# PokeDex - Teste Técnico FullStack
 
-## Getting Started
+Este é um projeto desenvolvido como parte de um teste técnico FullStack. O objetivo é criar uma aplicação que utilize dados climáticos para sugerir um Pokémon de acordo com o clima de uma cidade informada pelo usuário.
 
-First, run the development server:
+## Tecnologias Utilizadas
+
+- **Next.js v14**: Framework para React, utilizado para criar a interface e gerenciar o lado do servidor.
+- **React v18**: Biblioteca JavaScript para construir interfaces de usuário dinâmicas e interativas.
+- **Axios**: Biblioteca para realizar requisições HTTP para a API de clima (OpenWeatherMap) e a PokéAPI.
+- **OpenWeatherMap API**: API usada para obter dados climáticos em tempo real.
+- **PokéAPI**: API utilizada para acessar informações sobre Pokémon.
+- **Docker**: Ferramenta para criar, implantar e executar aplicativos em contêineres, facilitando a configuração do ambiente de desenvolvimento.
+- **Shadcn/UI**: Biblioteca de componentes de interface de usuário para a construção de uma UI bonita e responsiva.
+
+## Descrição do Projeto
+
+O **PokeDex** é uma aplicação onde o usuário pode inserir o nome de uma cidade e obter informações sobre o clima atual. Com base nessas informações, a aplicação sugere um Pokémon de acordo com o tipo de clima (como chuva, sol, neve, etc.). A sugestão de Pokémon é baseada em condições climáticas como temperatura, umidade e precipitação.
+
+### Funcionalidades:
+
+- **Inserção do nome da cidade**: O usuário insere o nome de uma cidade e o sistema retorna o clima atual da cidade.
+- **Sugestão de Pokémon**: A aplicação retorna um Pokémon de acordo com o tipo de clima da cidade informada.
+- **Condições de clima**: A aplicação distingue se está chovendo, se o clima está quente, frio, etc., e faz a escolha do Pokémon com base nisso.
+
+## Como Rodar o Projeto
+
+Para rodar a aplicação localmente, siga os passos abaixo:
+
+### 1. Clonar o repositório
+
+Clone o repositório do projeto para a sua máquina local:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone <URL-do-repositório>
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 2. Criar o arquivo .env
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Crie um arquivo .env no diretório raiz do projeto e adicione a chave OPEN_WEATHER_API_KEY com o valor da sua API de clima OpenWeatherMap:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+OPEN_WEATHER_API_KEY=<chave-da-api>
+```
 
-## Learn More
+### 3. Configurar e iniciar o Docker
 
-To learn more about Next.js, take a look at the following resources:
+Abra o terminal do projeto e digite docker-compose up -d para iniciar o Docker. É necessário ter o Docker instalado no seu computador para executar o comando, e o mesmo deve estar aberto e executando antes de executar o comando.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 4. Acessar a aplicação
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Acesse a aplicação em http://localhost:80 para ver o resultado da aplicação.
