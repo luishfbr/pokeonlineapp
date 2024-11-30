@@ -14,7 +14,7 @@ Este é um projeto desenvolvido como parte de um teste técnico FullStack. O obj
 
 ## Descrição do Projeto
 
-O **PokeDex** é uma aplicação onde o usuário pode inserir o nome de uma cidade e obter informações sobre o clima atual. Com base nessas informações, a aplicação sugere um Pokémon de acordo com o tipo de clima (como chuva, sol, neve, etc.). A sugestão de Pokémon é baseada em condições climáticas como temperatura, umidade e precipitação.
+O **PokeDex** é uma aplicação onde o usuário pode inserir o nome de uma cidade e obter informações sobre o clima atual. Com base nessas informações, a aplicação sugere um Pokémon de acordo com o tipo de clima. A sugestão de Pokémon é baseada em condições climáticas.
 
 ### Funcionalidades:
 
